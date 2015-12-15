@@ -23,28 +23,32 @@ overflow: hidden;
 }
 .accordion h4 {
 	display: block;
-	margin: 0;
-	height: 20px;
-	font: normal normal bold 1em/20px Arial, sans-serif;
+    position: relative;
+    margin: 0;
+    padding-left: 20px;
+    min-height: 20px;
+    font: normal normal bold 1em/20px Arial, sans-serif;
+    cursor: pointer;
+/*	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;*/
+}
 }
 .accordion h4:hover { 
 	cursor: pointer; 
 	text-decoration: underline; 
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	-o-user-select: none;
-	user-select: none;
 }
 .accordion h4:before {
-	content: "+";
-	display: block;
-	float: left;
-	width: 20px;
-	height: 20px;
-	/*text-align: center;*/
-	text-indent: 5px;
-	line-height: 20px;
+    content: "+";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
 }
 .accordion.accordion__active h4:before {
 	content: "-";
